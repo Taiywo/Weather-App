@@ -15,7 +15,9 @@ body {
     background-color: rgb(255, 208, 0);
     text-align: center;
     padding: 2rem;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
 }
 
 
