@@ -11,16 +11,20 @@
     <header class="header"><h1>My Weather App</h1></header>
     <main>
       <div id="user">
-        <p>Location</p>
-        <input type="text" placeholder="Your Location" />
-        <button type="submit">Set</button>
+        <p class="loc-text">LOCATION</p>
+        <div id="user-input">
+          <input type="text" placeholder="Enter your city" id="input" />
+          <button type="submit" id="btn">SET</button>
+        </div>
       </div>
       <div id="card">
-        <img src="./cloudy.png" alt="" />
+        <img src="" alt="" id="img"/>
         <div id="text-card">
-          <p id="degree">20 degrees</p>
-          <p id="main">Clouds</p>
+          <p id="locations"></p>
+          <p id="degree"> </p>
+          <p id="main"></p>
           <p id="date"></p>
+    
         </div>
       </div>
     </main>
