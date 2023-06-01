@@ -12,19 +12,27 @@
     <main>
       <div id="user">
         <p class="loc-text">LOCATION</p>
-        <div id="user-input">
-          <input type="text" placeholder="Enter your city" id="input" />
-          <button type="submit" id="btn">SET</button>
-        </div>
+        <input type="text" placeholder="Enter your city" id="input" />
       </div>
       <div id="card">
-        <img src="" alt="" id="img"/>
         <div id="text-card">
+          <p id="degree"></p>
           <p id="locations"></p>
-          <p id="degree"> </p>
-          <p id="main"></p>
-          <p id="date"></p>
-    
+          <div class="card-text">
+            <div>
+              <p id="date"></p>
+              <p id="descrip"></p>
+              <p id="degree2"> </p>
+            </div>
+            <img src="" alt="" id="img"/>  
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <h2>City Not Found. Try Again</h2>
+          </div>
         </div>
       </div>
     </main>

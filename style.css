@@ -2,17 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace ;
+    font-family: 'Open Sans';
 }
 
 body {
-    width: 100%;
-
-}
+    background: #E5E5E5;}
 
 .header {
     width: auto;
-    background-color: rgb(255, 208, 0);
+    background-color: #F94E4E;
     text-align: center;
     padding: 2rem;
     font-size: 2rem;
@@ -20,38 +18,29 @@ body {
     color: white;
 }
 
-
-main {
+#user{
     display: flex;
     flex-direction: column;
-    padding: 5rem;
-
-
+    justify-content: center;
+    padding-top: .5rem;
+    position: relative;
+    width: 20rem;
+    align-items: center;
 
 }
 
 input {
-    height: 2rem;
+    height: 3rem;
     border-top: 0;
     border-right: 0;
     border-left: 0;
     border-bottom: 2px solid rgb(192, 192, 192);
     width: 15rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
-
-}
-
-
-
-button {
-    height: 2rem;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    position: absolute;
-    left: 15rem;
-    bottom: 1rem;
+    border-radius: .4rem;
+    padding: .5rem;
+    
 }
 
 input:focus {
@@ -63,57 +52,158 @@ input::placeholder {
 }
 
 img {
-    width: 6rem;
+    width: 5rem;
 }
 
 #card {
-    display: flex;
-    justify-content: space-evenly;
-    width: 30rem;
-    background-color: rgba(226, 226, 226, 0.49);
-    border-radius: 1rem;
-    padding: 2rem;
-    margin: 3rem auto;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
+    display:none;
+    position: relative;
+    width: 253px;
+    height: 400px;
+    background: linear-gradient(322.09deg, rgba(249, 57, 57, 0.2) 13.99%, rgba(255, 98, 98, 0.2) 104.25%), linear-gradient(273.21deg, #F94545 -7%, rgba(255, 80, 80, 0.65) 102.49%), url(./weather-bg.jpg);
+    box-shadow: 0px 8px 16px rgba(24, 19, 6, 0.25);
+    border-radius: 16px;
 }
-#locations{
-    font-size: 2rem;
+
+
+#locations {
+    font-size: 1rem;
     font-weight: 900;
 }
-#degree{
-    font-size: 1.5rem;
+
+#degree {
+    font-size: 2rem;
     font-weight: 600;
 }
+
+#degree,
+#locations {
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
 #text-card {
     display: flex;
     flex-direction: column;
+    padding: 2rem;
 }
 
-#user-input {
+#descrip {
+    height: 50%;
     display: flex;
-    padding-top: .5rem;
-    position: relative;
-    width: 20rem;
-    justify-content: center;
-
+    flex-direction: column;
+    align-content: center;
 
 }
 
-#user {
+#user,
+#card {
     margin: auto;
+    margin-top: 2rem;
 }
 
 .loc-text {
-    padding-left: 2.5rem;
     font-size: .8rem;
-
-}
-
-button,
-.loc-text {
     color: rgb(174, 174, 174);
+    padding-bottom: 1remgit;
+
 }
-/* @media screen { max-width: (620px);
+
+.card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 253px;
+    height: 165px;
+    left: 0px;
+    top: 239px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 16px 16px;
+}
+
+#date {
+    font-size: 20px;
+    line-height: 20px;
+    color: #191919;
+    opacity: 0.7;
+}
+
+#descrip {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#degree2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+ 
+}
+
+#descrip,
+#date,
+#degree2 {
+    font-style: normal;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+#degree2,#descrip{
+    line-height: 16px;
+    color: #272727;
+    opacity: .5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    color:  #F94E4E;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     
-} */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #cdcdcde5;
+    border-radius: 2rem;
+    left: 0;
+    top: 8rem;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 260px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
